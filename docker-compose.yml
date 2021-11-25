@@ -5,7 +5,6 @@ services:
     container_name: labkey_container
     depends_on:
      - postgresdb
-    #build: './app'
     ports:
      - "8383:8080"
     volumes:
@@ -35,7 +34,6 @@ services:
   postgresdb:
     image: postgresql:12.8
     container_name: postgres_container
-    #build: './dbase'
     environment:
       POSTGRES_USER: dbuser
       POSTGRES_PASSWORD: dbpassword
