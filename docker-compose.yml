@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   lkey:
-    image: labkey-app:21.7
+    image: labkey:21.7
     container_name: labkey_container
     depends_on:
      - postgresdb
