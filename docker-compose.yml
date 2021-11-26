@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   lkey:
-    image: labkey:21.7
+    image: shoaibb/labkey:21.7
     container_name: labkey_container
     depends_on:
      - postgresdb
@@ -17,7 +17,7 @@ services:
 
   pgadmin:
     container_name: pgadmin4_container
-    image: pgadmin4:5.6
+    image: shoaibb/pgadmin4:5.6
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@org.com
       PGADMIN_DEFAULT_PASSWORD: pass_admin
@@ -32,7 +32,7 @@ services:
     restart: always
 
   postgresdb:
-    image: postgresql:12.8
+    image: shoaibb/postgresql:12.8
     container_name: postgres_container
     environment:
       POSTGRES_USER: dbuser
@@ -50,4 +50,3 @@ networks:
   nord-net:
     driver: bridge
     external: false
-    
